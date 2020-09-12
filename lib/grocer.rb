@@ -26,14 +26,18 @@ def consolidate_cart(cart)
   cart.each do |k, v|
     k[:count] = 0
   end
-  binding.pry
+  #binding.pry
   cart.each do |key, value|
     if key[:count] > 0
       key[:count] += 1
     end
-    if find_item_by_name_in_collection(key[:item], cart) == nil
-      key[:count] = 1
+    consolidated_cart.each do |k, v|
+      if find_item_by_name_in_collection(k[:item], cart) == nil
+        consolidated_cart << key
+        key[:count] = 1
+      end
     end
+  end
     
     #binding.pry
   end
