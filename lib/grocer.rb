@@ -27,6 +27,7 @@ def consolidate_cart(cart)
     consolidated_cart.each do |k|
       k[:count] = 0 
     end
+    
   end
   
   #binding.pry
