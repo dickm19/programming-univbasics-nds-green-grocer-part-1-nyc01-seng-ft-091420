@@ -24,11 +24,9 @@ def consolidate_cart(cart)
   #binding.pry
   cart.each do |key, value|
     consolidated_cart << key
-  end
-  
-  consolidated_cart.each do |k, v|
-    k[:count] = 0
-    binding.pry
+    consolidated_cart.each do |k|
+      k[:count] = 0 
+    end
   end
   
   #binding.pry
