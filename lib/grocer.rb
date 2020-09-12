@@ -33,8 +33,9 @@ def consolidate_cart(cart)
         consolidated_cart << key
         key[:count] = 1
       end
+      binding.pry
     end
-    binding.pry
+    #binding.pry
     if key[:count] > 0
       key[:count] += 1
     end
